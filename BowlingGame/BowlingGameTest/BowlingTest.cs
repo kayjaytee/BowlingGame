@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace BowlingGameTest
+namespace BowlingGame
 {
     public class BowlingTest
     {

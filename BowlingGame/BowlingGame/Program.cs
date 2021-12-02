@@ -2,12 +2,30 @@
 
 namespace BowlingGame
 {
+
+    class Game
+    {
+        private void Roll(int pins)
+        {
+         
+        }
+
+        private int Score()
+        {
+            return -1;
+        }
+
+        internal void Run()
+        {
+
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hate my dad");
+            var game = new Game();
+            game.Run();
         }
     }
 }
