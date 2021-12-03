@@ -7,7 +7,7 @@ namespace BowlingGame
     {
         private void Roll(int pins)
         {
-         
+            Console.WriteLine("Hej");
         }
 
         private int Score()
