@@ -4,40 +4,47 @@ using System.Collections.Generic;
 namespace BowlingGame
 {
 
-    class Game
+
+    public class Game //Måste vara public för att kunnas nås av BowlingGameTest - kräver visst tekniskt lösning för att rundgå detta
+                       //Vi får skapa metoder och klassen/klasser med hänvisning till Public tills vi hittar en smidigare lösning
     {
-        //Ska vi lagra det i två lister och jämföra index? Eller
-        //List<int> scoreList = new List<int>(); 
-        //List<int> rollList = new List<int>();
-        Random rnd = new Random();
 
         private int score = 0;
-        private int[] rolls = new int[21];
-        private int currentRoll = 0;
-        
-        
-        private void Roll(int pins)
+        //private int[] rolls = new int[21];
+        //private int currentRoll = 0;
+
+
+        public void Roll(int pins)
         {
             score += pins;
-            rolls[currentRoll++] = pins;
 
 
+            //rolls[currentRoll++] = pins;
             //Roll roll = new Roll(pins);
         }
 
-        private int Score()
+        public int Score()
         {
-            return -1;
+            return score;
         }
 
         internal void Run()
         {
-            Console.WriteLine("Test av github ");
 
         }
     }
 
-    class Frame
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var game = new Game();
+            game.Run();
+        }
+    }
+
+    #region Eventuella extra klasser för projektet; sidosatta för tillfället
+    /*class Frame
     {
         public int Pins;
         public int Roll;
@@ -55,7 +62,7 @@ namespace BowlingGame
 
             }
         }
-    }
+    }*/
 
     /* (Eventeullt bortag)
     class Roll
@@ -74,12 +81,5 @@ namespace BowlingGame
         }
     }
     */
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var game = new Game();
-            game.Run();
-        }
-    }
+    #endregion
 }

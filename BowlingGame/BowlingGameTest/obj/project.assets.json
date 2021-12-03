@@ -5933,20 +5933,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lilje\\.nuget\\packages\\": {}
+    "C:\\Users\\K-J\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
+      "projectUniqueName": "C:\\Users\\K-J\\Documents\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
       "projectName": "BowlingGameTest",
-      "projectPath": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
-      "packagesPath": "C:\\Users\\lilje\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGameTest\\obj\\",
+      "projectPath": "C:\\Users\\K-J\\Documents\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
+      "packagesPath": "C:\\Users\\K-J\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\K-J\\Documents\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGameTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\lilje\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\K-J\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5959,8 +5967,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj": {
-              "projectPath": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj"
+            "C:\\Users\\K-J\\Documents\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj": {
+              "projectPath": "C:\\Users\\K-J\\Documents\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj"
             }
           }
         }
@@ -6011,7 +6019,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

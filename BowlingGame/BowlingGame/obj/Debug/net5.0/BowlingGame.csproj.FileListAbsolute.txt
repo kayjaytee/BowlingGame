@@ -1,0 +1,16 @@
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\bin\Debug\net5.0\BowlingGame.exe
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\bin\Debug\net5.0\BowlingGame.deps.json
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\bin\Debug\net5.0\BowlingGame.runtimeconfig.json
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\bin\Debug\net5.0\BowlingGame.runtimeconfig.dev.json
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\bin\Debug\net5.0\BowlingGame.dll
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\bin\Debug\net5.0\ref\BowlingGame.dll
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\bin\Debug\net5.0\BowlingGame.pdb
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.csproj.AssemblyReference.cache
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.AssemblyInfoInputs.cache
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.AssemblyInfo.cs
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.csproj.CoreCompileInputs.cache
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.dll
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\ref\BowlingGame.dll
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.pdb
+C:\Users\K-J\Documents\GitHub\BowlingGame\BowlingGame\BowlingGame\BowlingGame\obj\Debug\net5.0\BowlingGame.genruntimeconfig.cache
