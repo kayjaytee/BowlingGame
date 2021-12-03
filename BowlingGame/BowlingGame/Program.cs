@@ -17,6 +17,7 @@ namespace BowlingGame
 
         internal void Run()
         {
+            Console.WriteLine("Test av github ");
 
         }
     }
