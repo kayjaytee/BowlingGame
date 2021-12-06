@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Xunit;
 
 namespace BowlingGame
@@ -6,6 +7,7 @@ namespace BowlingGame
     public class BowlingTest
     {
         public static Game game;
+        
 
         protected object SetUpGame()
         {
@@ -14,9 +16,7 @@ namespace BowlingGame
         }
 
         [Theory (DisplayName = "Multiple Rolls: Method")]
-        [InlineData(20, 0)] //Deklarering av värde
-        [InlineData(20, 1)] //Deklarering av värde
-        [InlineData(20, 2)] //Deklarering av värde
+        [InlineData(20,1)] //Deklarering av värde
         public void MultipleRolls(int n, int pins)
         {
             
@@ -31,13 +31,13 @@ namespace BowlingGame
         {
 
             //Arrange - Given
-            game = (Game)SetUpGame();
-            var result = game.Score();
+            
+            
 
 
             //Act - When
             MultipleRolls(20, 0);
-
+            var result = game.Score();
 
             //Assert - Then
             Assert.Equal(0, result);
@@ -49,13 +49,14 @@ namespace BowlingGame
         {
 
             //Arrange - Given
-            game = (Game)SetUpGame();
-            var result = game.Score();
+            
+            
 
 
             //Act - When
             MultipleRolls(20, 1);
 
+            var result = game.Score();
 
             //Assert - Then
             Assert.Equal(20, result);
@@ -65,14 +66,23 @@ namespace BowlingGame
         [Fact(DisplayName = "Testing if 'Spare' hits are calculated correctly")]
         void TestSpare()
         {
-            game = (Game)SetUpGame();
-            var result = game.Score();
+            
 
             game.Roll(5);
             game.Roll(5);
             game.Roll(3);
             MultipleRolls(17, 0);
+            var result = game.Score();
             Assert.Equal(16, result);
+        }
+
+        [Fact(DisplayName ="Hur många i rolls arrayen är fyllda")]
+        void TestArray()
+        {
+            for (int i = 0; i < rolls; i++)
+            {
+
+            }
         }
     }
 }
