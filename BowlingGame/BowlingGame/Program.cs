@@ -4,22 +4,18 @@ using System.Collections.Generic;
 namespace BowlingGame
 {
 
-
     public class Game //Måste vara public för att kunnas nås av BowlingGameTest - kräver visst tekniskt lösning för att rundgå detta
                        //Vi får skapa metoder och klassen/klasser med hänvisning till Public tills vi hittar en smidigare lösning
     {
 
         
-        public int[] rolls = new int[100];
-
+        public int[] rolls = new int[20];
         private int currentRoll = 0;
 
         public void Roll(int pins)
         {
-            
-            rolls[currentRoll] = pins;
-            currentRoll++;
-            //Roll roll = new Roll(pins);
+            rolls[currentRoll++] = pins;
+     
         }
 
         public int Score()

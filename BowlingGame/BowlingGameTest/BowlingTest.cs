@@ -7,8 +7,6 @@ namespace BowlingGame
     public class BowlingTest
     {
         public static Game game;
-        
-
         protected object SetUpGame()
         {
             Game game = new Game();
@@ -19,7 +17,7 @@ namespace BowlingGame
         [InlineData(20,1)] //Deklarering av värde
         public void MultipleRolls(int n, int pins)
         {
-            
+
             for (int i = 0; i < n; i++)
             {
                 game.Roll(pins);
@@ -31,10 +29,7 @@ namespace BowlingGame
         {
 
             //Arrange - Given
-            
-            
-
-
+            game = (Game)SetUpGame();
             //Act - When
             MultipleRolls(20, 0);
             var result = game.Score();
@@ -49,8 +44,8 @@ namespace BowlingGame
         {
 
             //Arrange - Given
-            
-            
+            game = (Game)SetUpGame();
+
 
 
             //Act - When
@@ -66,23 +61,15 @@ namespace BowlingGame
         [Fact(DisplayName = "Testing if 'Spare' hits are calculated correctly")]
         void TestSpare()
         {
-            
+            game = (Game)SetUpGame();
 
             game.Roll(5);
-            game.Roll(5);
+            game.Roll(5); //Spare
             game.Roll(3);
             MultipleRolls(17, 0);
             var result = game.Score();
             Assert.Equal(16, result);
         }
 
-        [Fact(DisplayName ="Hur många i rolls arrayen är fyllda")]
-        void TestArray()
-        {
-            for (int i = 0; i < rolls; i++)
-            {
-
-            }
-        }
     }
 }
