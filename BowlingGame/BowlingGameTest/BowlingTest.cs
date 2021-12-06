@@ -14,8 +14,10 @@ namespace BowlingGame
         }
 
         [Theory (DisplayName = "Multiple Rolls: Method")]
-        [InlineData(20,1)] //Deklarering av värde
-        public void MultipleRolls(int n, int pins)
+        [InlineData(20, 0)]
+        [InlineData(17, 0)]
+        [InlineData(16, 0)]
+        void MultipleRolls(int n, int pins)
         {
 
             for (int i = 0; i < n; i++)
@@ -23,6 +25,12 @@ namespace BowlingGame
                 game.Roll(pins);
             }
         } //Privat Testmetod, inte bunden till originalkoden
+
+        void RollSpare()
+        {
+            game.Roll(5);
+            game.Roll(5);
+        }
 
         [Fact(DisplayName = "Every Roll() will miss on each frame, will the score return the correct value?")]
         public void HitZeroPinsEachFrame()
@@ -63,13 +71,22 @@ namespace BowlingGame
         {
             game = (Game)SetUpGame();
 
-            game.Roll(5);
-            game.Roll(5); //Spare
+            RollSpare();
             game.Roll(3);
             MultipleRolls(17, 0);
             var result = game.Score();
             Assert.Equal(16, result);
         }
 
+        [Fact(DisplayName = "FIRST STRIKE! Does it return the correct value?")] // == Utan parametrar
+        void TestOneStrike()
+        {
+            game.Roll(10);
+            game.Roll(3);
+            game.Roll(4);
+            MultipleRolls(16, 0);
+            var result = game.Score();
+            Assert.Equal(24, result);
+        }
     }
 }
