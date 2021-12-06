@@ -9,11 +9,11 @@ namespace BowlingGame
                        //Vi får skapa metoder och klassen/klasser med hänvisning till Public tills vi hittar en smidigare lösning
     {
 
-        private int score = 0;
+        
         //private int[] rolls = new int[21];
         //private int currentRoll = 0;
 
-
+        public int score = 0;
         public void Roll(int pins)
         {
             score += pins;

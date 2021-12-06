@@ -1,28 +1,37 @@
-using System;
 using Xunit;
 
 namespace BowlingGame
 {
-     //[assembly: PrivateVisibleTo("BowlingGameTest")] - Eventuell lösning på protected class problem?
+    //[assembly: PrivateVisibleTo("BowlingGameTest")] - Eventuell lösning på protected class problem?
     public class BowlingTest
     {
-        
-        private void MultipleRolls(int cap, int pins)
+        public static Game game;
+
+        protected object SetUpGame()
         {
             Game game = new Game();
+            return game;
+        }
 
-            for (int i = 0; i < cap; i++)
+        [Theory (DisplayName = "Multiple Rolls: Method")]
+        [InlineData(20, 0)] //Deklarering av värde
+        [InlineData(20, 1)] //Deklarering av värde
+        [InlineData(20, 2)] //Deklarering av värde
+        public void MultipleRolls(int n, int pins)
+        {
+            
+            for (int i = 0; i < n; i++)
             {
                 game.Roll(pins);
             }
         } //Privat Testmetod, inte bunden till originalkoden
 
         [Fact(DisplayName = "Every Roll() will miss on each frame, will the score return the correct value?")]
-        void HitZeroPinsEachFrame()
+        public void HitZeroPinsEachFrame()
         {
 
             //Arrange - Given
-            Game game = new Game();
+            game = (Game)SetUpGame();
             var result = game.Score();
 
 
@@ -32,15 +41,15 @@ namespace BowlingGame
 
             //Assert - Then
             Assert.Equal(0, result);
-            
+
         }
 
         [Fact(DisplayName = "Hit 1 pin each round(2 rounds per Frame) with Roll(), will the score return the correct value?")]
-        void HitOnePinEachFrame()
+        public void HitOnePinEachFrame()
         {
 
             //Arrange - Given
-            Game game = new Game();
+            game = (Game)SetUpGame();
             var result = game.Score();
 
 
@@ -51,6 +60,19 @@ namespace BowlingGame
             //Assert - Then
             Assert.Equal(20, result);
 
+        }
+
+        [Fact(DisplayName = "Testing if 'Spare' hits are calculated correctly")]
+        void TestSpare()
+        {
+            game = (Game)SetUpGame();
+            var result = game.Score();
+
+            game.Roll(5);
+            game.Roll(5);
+            game.Roll(3);
+            MultipleRolls(17, 0);
+            Assert.Equal(16, result);
         }
     }
 }
