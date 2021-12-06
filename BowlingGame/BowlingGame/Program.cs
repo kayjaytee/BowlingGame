@@ -9,7 +9,7 @@ namespace BowlingGame
     {
 
         
-        public int[] rolls = new int[20];
+        public int[] rolls = new int[21];
         private int currentRoll = 0;
 
         public void Roll(int pins)
