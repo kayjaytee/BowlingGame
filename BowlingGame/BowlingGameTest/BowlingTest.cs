@@ -32,6 +32,11 @@ namespace BowlingGame
             game.Roll(5);
         }
 
+        void RollStrike()
+        {
+            game.Roll(10);
+        }
+
         [Fact(DisplayName = "Every Roll() will miss on each frame, will the score return the correct value?")]
         public void HitZeroPinsEachFrame()
         {
@@ -40,10 +45,9 @@ namespace BowlingGame
             game = (Game)SetUpGame();
             //Act - When
             MultipleRolls(20, 0);
-            var result = game.Score();
 
             //Assert - Then
-            Assert.Equal(0, result);
+            Assert.Equal(0, game.Score());
 
         }
 
@@ -62,7 +66,7 @@ namespace BowlingGame
             var result = game.Score();
 
             //Assert - Then
-            Assert.Equal(20, result);
+            Assert.Equal(20, game.Score());
 
         }
 
@@ -74,19 +78,28 @@ namespace BowlingGame
             RollSpare();
             game.Roll(3);
             MultipleRolls(17, 0);
-            var result = game.Score();
-            Assert.Equal(16, result);
+            Assert.Equal(16, game.Score());
         }
 
-        [Fact(DisplayName = "FIRST STRIKE! Does it return the correct value?")] // == Utan parametrar
+        [Fact(DisplayName = "ONE STRIKE! Does it return the correct value?")] // == Utan parametrar
         void TestOneStrike()
         {
-            game.Roll(10);
+            game = (Game)SetUpGame();
+
+            RollStrike();
             game.Roll(3);
             game.Roll(4);
-            MultipleRolls(16, 0);
-            var result = game.Score();
-            Assert.Equal(24, result);
+            MultipleRolls(17, 0);
+            Assert.Equal(24, game.Score()); //Actual: 20
+        }
+
+        [Fact (DisplayName = "With perfect score, will the values applied be correct?")]
+        void TestPerfectGame() //Need clarification for correct returned value.
+        {
+            game = (Game)SetUpGame();
+            MultipleRolls(12, 10);
+            Assert.Equal(300, game.Score());
+
         }
     }
 }
