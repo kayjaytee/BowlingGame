@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Y1H8jShbCzc1se30YWdkIKzT6IrAEYs8iNiJCUfXjbqwWw+O5nqYt9ESifBvM7dIGpPasEUzJuUtzB2H/8CQKA==",
+  "dgSpecHash": "BunCS+Bbb/ym0+ec0m5/jKdtasi387SCwLLuAQSCjUcwRHX+UlThMeT4uLOTlwt/d4ftaxaXvHvo5e5uyvFu/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\K-J\\Documents\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\olive\\OneDrive\\Dokument\\GitHub\\webbshop2\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\olive\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
   "logs": []
 }

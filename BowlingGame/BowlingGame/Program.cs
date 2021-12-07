@@ -70,10 +70,9 @@ namespace BowlingGame
             return rolls[frameindex] == 10;
         }
 
-        internal void Run()
-        {
+        internal void Run(int frameindex)
+            
 
-        }
     }
 
     class Program
