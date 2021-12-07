@@ -5933,19 +5933,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\olive\\.nuget\\packages\\": {}
+    "C:\\Users\\lilje\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\olive\\OneDrive\\Dokument\\GitHub\\webbshop2\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
+      "projectUniqueName": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
       "projectName": "BowlingGameTest",
-      "projectPath": "C:\\Users\\olive\\OneDrive\\Dokument\\GitHub\\webbshop2\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
-      "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\olive\\OneDrive\\Dokument\\GitHub\\webbshop2\\BowlingGame\\BowlingGame\\BowlingGameTest\\obj\\",
+      "projectPath": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGameTest\\BowlingGameTest.csproj",
+      "packagesPath": "C:\\Users\\lilje\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGameTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\olive\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lilje\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5959,8 +5959,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\olive\\OneDrive\\Dokument\\GitHub\\webbshop2\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj": {
-              "projectPath": "C:\\Users\\olive\\OneDrive\\Dokument\\GitHub\\webbshop2\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj"
+            "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj": {
+              "projectPath": "C:\\Users\\lilje\\OneDrive\\Dokument\\GitHub\\BowlingGame\\BowlingGame\\BowlingGame\\BowlingGame.csproj"
             }
           }
         }
@@ -6011,7 +6011,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
