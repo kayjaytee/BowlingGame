@@ -13,10 +13,7 @@ namespace BowlingGame
             return game;
         }
 
-        [Theory (DisplayName = "Multiple Rolls: Method")]
-        [InlineData(20, 0)]
-        [InlineData(17, 0)]
-        [InlineData(16, 0)]
+        #region Privata Metoder; Specifikt för Tester
         void MultipleRolls(int n, int pins)
         {
 
@@ -24,18 +21,17 @@ namespace BowlingGame
             {
                 game.Roll(pins);
             }
-        } //Privat Testmetod, inte bunden till originalkoden
-
+        }
         void RollSpare()
         {
             game.Roll(5);
             game.Roll(5);
         }
-
         void RollStrike()
         {
             game.Roll(10);
         }
+        #endregion
 
         [Fact(DisplayName = "Every Roll() will miss on each frame, will the score return the correct value?")]
         public void HitZeroPinsEachFrame()
@@ -63,7 +59,6 @@ namespace BowlingGame
             //Act - When
             MultipleRolls(20, 1);
 
-            var result = game.Score();
 
             //Assert - Then
             Assert.Equal(20, game.Score());
@@ -89,7 +84,6 @@ namespace BowlingGame
             RollStrike();
             game.Roll(3);
             game.Roll(4);
-            MultipleRolls(17, 0);
             Assert.Equal(24, game.Score()); //Actual: 20
         }
 
