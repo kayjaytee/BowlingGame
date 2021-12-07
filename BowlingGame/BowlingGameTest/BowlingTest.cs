@@ -8,7 +8,6 @@ namespace BowlingGame
     {
         public static Game game;
         
-
         protected object SetUpGame()
         {
             Game game = new Game();
@@ -76,13 +75,13 @@ namespace BowlingGame
             Assert.Equal(16, result);
         }
 
-        [Fact(DisplayName ="Hur många i rolls arrayen är fyllda")]
-        void TestArray()
-        {
-            for (int i = 0; i < rolls; i++)
-            {
+        //[Fact(DisplayName ="Hur många i rolls arrayen är fyllda")]
+        //void TestArray()
+        //{
+        //    for (int i = 0; i < rolls; i++)
+        //    {
 
-            }
-        }
+        //    }
+        //}
     }
 }
