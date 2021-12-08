@@ -41,6 +41,7 @@ namespace BowlingGame
         #endregion
 
         [Fact(DisplayName = "Every Roll() will miss on each frame, will the score return the correct value?")]
+        [Trait("Category:", "Unit Testing")]
         private void HitZeroPinsEachFrame()
         {
 
@@ -57,6 +58,7 @@ namespace BowlingGame
         }
 
         [Fact(DisplayName = "Hit 1 pin each round(2 rounds per Frame) with Roll(), will the score return the correct value?")]
+        [Trait("Category:", "Unit Testing")]
         private void HitOnePinEachFrame()
         {
 
@@ -74,6 +76,7 @@ namespace BowlingGame
         }
 
         [Fact(DisplayName = "Testing if 'Spare' hits are calculated correctly")]
+        [Trait("Category:", "Unit Testing")]
         private void TestSpare()
         {
             //Arrange - Given
@@ -89,6 +92,7 @@ namespace BowlingGame
         }
 
         [Fact(DisplayName = "ONE STRIKE! Does it return the correct value?")]
+        [Trait("Category:", "Unit Testing")]
         private void TestOneStrike()
         {
             //Arrange - Given
@@ -101,6 +105,7 @@ namespace BowlingGame
         }
 
         [Fact(DisplayName = "With perfect score, will the values applied be correct?")]
+        [Trait("Category:", "Unit Testing")]
         private void TestPerfectGame()
         {
         
@@ -112,7 +117,7 @@ namespace BowlingGame
         }
 
         [Fact(DisplayName = "Test by K-J: F1 Spare > F2 5+0 > F3 STRIKE!!! > F4 5+3 = Return Result")]
-        [Trait ("PersonalTests:", "Karl-Johan Tjust")]
+        [Trait ("PersonalTests:", "Karl-Johan")]
         private void KayJayTest()
         {
             SetUpGame();
@@ -133,6 +138,7 @@ namespace BowlingGame
         }
 
         [Fact(DisplayName = "Jonathan Test")]
+        [Trait("PersonalTests:", "Jonathan")]
         private void JonathanTest()
         {                               // 1     2     2
             SetUpGame(); // (10) + (5) + (5) 
