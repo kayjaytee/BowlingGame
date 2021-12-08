@@ -148,15 +148,16 @@ namespace BowlingGame
             Assert.Equal(40, Result());
         }
 
-            //[Fact(DisplayName = "Mr oliver Test")]
-            //void MrOliverTest()
-            //{
-            // game = (Game)SetUpGame();
-            // MultipleRolls(1, 5);
-            // MultipleRolls(2, 10);
+        [Fact(DisplayName = "Mr oliver Test")]
+        [Trait("PersonalTests:", "Mr Oliver Test")]
+        void MrOliverTest()
+            {
+             game = (Game)SetUpGame();   //
+             MultipleRolls(1, 5);
+             MultipleRolls(2, 10);
 
-            // Assert.Equal(55, game.Score());
-            //}
+             Assert.Equal(25, game.Score());
+            }
     }
 
 }
