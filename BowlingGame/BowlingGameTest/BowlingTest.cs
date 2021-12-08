@@ -75,7 +75,7 @@ namespace BowlingGame
             Assert.Equal(16, game.Score());
         }
 
-        [Fact(DisplayName = "ONE STRIKE! Does it return the correct value?")] 
+        [Fact(DisplayName = "ONE STRIKE! Does it return the correct value?")]
         void TestOneStrike()
         {
             game = (Game)SetUpGame();
@@ -86,8 +86,8 @@ namespace BowlingGame
             Assert.Equal(24, game.Score()); //Actual: 20
         }
 
-        [Fact (DisplayName = "With perfect score, will the values applied be correct?")]
-        void TestPerfectGame() 
+        [Fact(DisplayName = "With perfect score, will the values applied be correct?")]
+        void TestPerfectGame()
         {
             game = (Game)SetUpGame();
             MultipleRolls(12, 10);
@@ -100,8 +100,21 @@ namespace BowlingGame
             game = (Game)SetUpGame(); // (10) + (5) + (5) 
             MultipleRolls(1, 10); // Räknar 2 nästa kast, (10) + (5) + (5), Frame 1 = 20.
             MultipleRolls(3, 5); // Frame 2 = (5) + (5), + 5 nästa. Total = 35
-                                // Frame 3 = (5) = Total 40
+                                 // Frame 3 = (5) = Total 40
             Assert.Equal(40, game.Score());
         }
+
+        //[Fact(DisplayName = "Mr oliver Test")]
+        //void MrOliverTest()
+        {
+           // game = (Game)SetUpGame();
+           // MultipleRolls(1, 5);
+           // MultipleRolls(2, 10);
+
+           // Assert.Equal(55, game.Score());
+        }
+
     }
-}
+        
+
+    
