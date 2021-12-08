@@ -93,6 +93,7 @@ namespace BowlingGame
             game = (Game)SetUpGame();
             MultipleRolls(12, 10);
             Assert.Equal(300, game.Score());
+            System.Console.WriteLine("TEst");
 
         }
     }
