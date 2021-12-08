@@ -1,58 +1,67 @@
-using System.Collections.Generic;
 using Xunit;
 
 namespace BowlingGame
 {
-    //[assembly: PrivateVisibleTo("BowlingGameTest")] - Eventuell lösning på protected class problem?
     public class BowlingTest
     {
-        public static Game game;
-        protected object SetUpGame()
+        private Game game;
+        internal object SetUpGame() //Gammal Lösning: game = (Game)SetUpGame();
         {
-            Game game = new Game();
+            game = new Game();
             return game;
         }
 
         #region Privata Metoder; Specifikt för Tester
-        void MultipleRolls(int n, int pins)
+        private object Result()
+        {
+            return game.Score();
+        }
+
+        private void SingleRoll(int pins)
+        {
+            game.Roll(pins);
+        }
+
+        private void MultipleRolls(int n, int pins)
         {
             for (int i = 0; i < n; i++)
             {
-                game.Roll(pins);
+                SingleRoll(pins);
             }
         }
-        void RollSpare()
+        private void RollSpare()
         {
-            game.Roll(5);
-            game.Roll(5);
+            SingleRoll(5);
+            SingleRoll(5);
         }
-        void RollStrike()
+        private void RollStrike()
         {
             game.Roll(10);
         }
         #endregion
 
         [Fact(DisplayName = "Every Roll() will miss on each frame, will the score return the correct value?")]
-        public void HitZeroPinsEachFrame()
+        private void HitZeroPinsEachFrame()
         {
 
             //Arrange - Given
-            game = (Game)SetUpGame();
+            SetUpGame();
+
             //Act - When
+
             MultipleRolls(20, 0);
 
             //Assert - Then
-            Assert.Equal(0, game.Score());
+            Assert.Equal(0, Result());
 
         }
 
         [Fact(DisplayName = "Hit 1 pin each round(2 rounds per Frame) with Roll(), will the score return the correct value?")]
-        public void HitOnePinEachFrame()
+        private void HitOnePinEachFrame()
         {
 
             //Arrange - Given
-            game = (Game)SetUpGame();
-
+            SetUpGame();
 
 
             //Act - When
@@ -60,61 +69,91 @@ namespace BowlingGame
 
 
             //Assert - Then
-            Assert.Equal(20, game.Score());
+            Assert.Equal(20, Result());
 
         }
 
         [Fact(DisplayName = "Testing if 'Spare' hits are calculated correctly")]
-        void TestSpare()
+        private void TestSpare()
         {
-            game = (Game)SetUpGame();
+            //Arrange - Given
+            SetUpGame();
 
+            //Act - When
             RollSpare();
-            game.Roll(3);
+            SingleRoll(3);
             MultipleRolls(17, 0);
-            Assert.Equal(16, game.Score());
+
+            //Assert - Then
+            Assert.Equal(16, Result());
         }
 
         [Fact(DisplayName = "ONE STRIKE! Does it return the correct value?")]
-        void TestOneStrike()
+        private void TestOneStrike()
         {
-            game = (Game)SetUpGame();
+            //Arrange - Given
+            SetUpGame();
 
             RollStrike(); //10 (3 + 4) = 17
-            game.Roll(3); // (3 + 4)
-            game.Roll(4); // = Total 24
-            Assert.Equal(24, game.Score()); //Actual: 20
+            SingleRoll(3); // (3 + 4)
+            SingleRoll(4); // = Total 24
+            Assert.Equal(24, Result()); //Old: Actual result 20
         }
 
         [Fact(DisplayName = "With perfect score, will the values applied be correct?")]
-        void TestPerfectGame()
+        private void TestPerfectGame()
         {
-            game = (Game)SetUpGame();
+        
+            SetUpGame();
+   
             MultipleRolls(12, 10);
-            Assert.Equal(300, game.Score());
+
+            Assert.Equal(300, Result());
+        }
+
+        [Fact(DisplayName = "Test by K-J: F1 Spare > F2 5+0 > F3 STRIKE!!! > F4 5+3 = Return Result")]
+        [Trait ("PersonalTests:", "Karl-Johan Tjust")]
+        private void KayJayTest()
+        {
+            SetUpGame();
+
+            RollSpare(); //Frame 1
+
+            SingleRoll(5); //Frame 2
+            SingleRoll(0);
+
+            RollStrike(); //Frame 3
+
+            SingleRoll(5); //Frame 4
+            SingleRoll(3);
+
+
+            Assert.Equal(46, Result());
+
         }
 
         [Fact(DisplayName = "Jonathan Test")]
-        void JonathanTest()
+        private void JonathanTest()
         {                               // 1     2     2
-            game = (Game)SetUpGame(); // (10) + (5) + (5) 
+            SetUpGame(); // (10) + (5) + (5) 
             MultipleRolls(1, 10); // Räknar 2 nästa kast, (10) + (5) + (5), Frame 1 = 20.
             MultipleRolls(3, 5); // Frame 2 = (5) + (5), + 5 nästa. Total = 35
                                  // Frame 3 = (5) = Total 40
-            Assert.Equal(40, game.Score());
+            Assert.Equal(40, Result());
         }
 
-        //[Fact(DisplayName = "Mr oliver Test")]
-        //void MrOliverTest()
-        {
-           // game = (Game)SetUpGame();
-           // MultipleRolls(1, 5);
-           // MultipleRolls(2, 10);
+            //[Fact(DisplayName = "Mr oliver Test")]
+            //void MrOliverTest()
+            //{
+            // game = (Game)SetUpGame();
+            // MultipleRolls(1, 5);
+            // MultipleRolls(2, 10);
 
-           // Assert.Equal(55, game.Score());
-        }
-
+            // Assert.Equal(55, game.Score());
+            //}
     }
+
+}
         
 
     

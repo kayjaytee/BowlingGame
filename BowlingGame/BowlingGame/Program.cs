@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("BowlingGameTest")]
 namespace BowlingGame
 {
-
-    public class Game //Måste vara public för att kunnas nås av BowlingGameTest - kräver visst tekniskt lösning för att rundgå detta
-                       //Vi får skapa metoder och klassen/klasser med hänvisning till Public tills vi hittar en smidigare lösning
+    internal class Game
     {
 
-        public int[] rolls = new int[21]; // Räknar från 0
+        private readonly int[] rolls = new int[21]; // Räknar från 0
         private int currentRoll = 0;
 
-        public void Roll(int pins)
+        internal void Roll(int pins)
         {
             rolls[currentRoll++] = pins; // Sätter värderna
         }
 
-        public int Score()
+        internal int Score()
         {
             int score = 0;
             int frameindex = 0;
@@ -40,8 +39,8 @@ namespace BowlingGame
             }
             return score;
         }
-        
-        
+
+        #region Score Calculation Methods
         private int GetStandardScore(int frameindex)
         {
             return rolls[frameindex] + rolls[frameindex + 1];
@@ -66,10 +65,13 @@ namespace BowlingGame
         {
             return rolls[frameindex] == 10;
         }
+        #endregion
+
 
         internal void Run()
         {
-
+            //Här kan man börja jobba med Konsoll-Appen
+            //Med hjälp av färdiga tester och metoder, kan man börja bygga programmet med färdiga matematiska ekvationer!
         }
     }
 
