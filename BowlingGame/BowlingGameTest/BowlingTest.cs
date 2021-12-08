@@ -16,7 +16,6 @@ namespace BowlingGame
         #region Privata Metoder; Specifikt för Tester
         void MultipleRolls(int n, int pins)
         {
-
             for (int i = 0; i < n; i++)
             {
                 game.Roll(pins);
@@ -76,25 +75,23 @@ namespace BowlingGame
             Assert.Equal(16, game.Score());
         }
 
-        [Fact(DisplayName = "ONE STRIKE! Does it return the correct value?")] // == Utan parametrar
+        [Fact(DisplayName = "ONE STRIKE! Does it return the correct value?")] 
         void TestOneStrike()
         {
             game = (Game)SetUpGame();
 
-            RollStrike();
-            game.Roll(3);
-            game.Roll(4);
+            RollStrike(); //10 (3 + 4) = 17
+            game.Roll(3); // (3 + 4)
+            game.Roll(4); // = Total 24
             Assert.Equal(24, game.Score()); //Actual: 20
         }
 
         [Fact (DisplayName = "With perfect score, will the values applied be correct?")]
-        void TestPerfectGame() //Need clarification for correct returned value.
+        void TestPerfectGame() 
         {
             game = (Game)SetUpGame();
             MultipleRolls(12, 10);
             Assert.Equal(300, game.Score());
-            System.Console.WriteLine("TEst");
-
         }
     }
 }

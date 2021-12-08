@@ -8,61 +8,58 @@ namespace BowlingGame
                        //Vi får skapa metoder och klassen/klasser med hänvisning till Public tills vi hittar en smidigare lösning
     {
 
-        
-        public int[] rolls = new int[121];
+        public int[] rolls = new int[21]; // Räknar från 0
         private int currentRoll = 0;
 
         public void Roll(int pins)
         {
-            rolls[currentRoll++] = pins;
-     
+            rolls[currentRoll++] = pins; // Sätter värderna
         }
 
         public int Score()
         {
             int score = 0;
             int frameindex = 0;
-            for (int frame = 0; frame < 10; frame++)
+            for (int frame = 0; frame < 10; frame++) 
             {
-                if (IsStrike(frameindex))
+                if (IsStrike(frameindex)) // Bool, return true
                 {
-                    score += 10 +
-                        StrikeBonus(frameindex) +
-                        frameindex++;
+                    score += GetStrikeScore(frameindex); 
+                    frameindex++;
                 }
                 else if (IsSpare(frameindex))
                 {
-                    score += 10 + SpareBonus(frameindex);
+                    score += GetSpareScore(frameindex);
                     frameindex += 2;
                 }
                 else
                 {
-                    score += SumofBallsInFrame(frameindex);
+                    score += GetStandardScore(frameindex);
                     frameindex += 2;
                 }
             }
             return score;
         }
-
-        private int SumofBallsInFrame(int frameindex)
+        
+        
+        private int GetStandardScore(int frameindex)
         {
             return rolls[frameindex] + rolls[frameindex + 1];
         }
 
-        private int SpareBonus(int frameindex)
+        private int GetSpareScore(int frameindex)
         {
-            return rolls[frameindex + 2];
+            return rolls[frameindex] + rolls[frameindex + 1] + rolls[frameindex + 2];
         }
 
-        private int StrikeBonus(int frameindex)
+        private int GetStrikeScore(int frameindex)
         {
-            return rolls[frameindex + 1] + rolls[frameindex + 2];
+            return rolls[frameindex] + rolls[frameindex + 1] + rolls[frameindex + 2];
         }
 
         private bool IsSpare(int frameindex)
         {
-            return rolls[frameindex] +
-                   rolls[frameindex + 1] == 10;
+            return rolls[frameindex] + rolls[frameindex + 1] == 10;
         }
 
         private bool IsStrike(int frameindex)
@@ -74,8 +71,6 @@ namespace BowlingGame
         {
 
         }
-            
-
     }
 
     class Program

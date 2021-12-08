@@ -119,7 +119,6 @@ C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\BowlingGameTest.runtimeconfig.dev.json
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\BowlingGameTest.dll
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\ref\BowlingGameTest.dll
-C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\BowlingGameTest.pdb
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -208,7 +207,6 @@ C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\obj\Debug\net5.0\BowlingGameTest.csproj.CopyComplete
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\obj\Debug\net5.0\BowlingGameTest.dll
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\obj\Debug\net5.0\ref\BowlingGameTest.dll
-C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\obj\Debug\net5.0\BowlingGameTest.pdb
 C:\Users\lilje\OneDrive\Dokument\GitHub\BowlingGame\BowlingGame\BowlingGameTest\obj\Debug\net5.0\BowlingGameTest.genruntimeconfig.cache
 C:\Users\olive\OneDrive\Dokument\GitHub\webbshop2\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\CoverletSourceRootsMapping
 C:\Users\olive\OneDrive\Dokument\GitHub\webbshop2\BowlingGame\BowlingGame\BowlingGameTest\bin\Debug\net5.0\testhost.exe
