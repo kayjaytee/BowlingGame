@@ -93,5 +93,15 @@ namespace BowlingGame
             MultipleRolls(12, 10);
             Assert.Equal(300, game.Score());
         }
+
+        [Fact(DisplayName = "Jonathan Test")]
+        void JonathanTest()
+        {                               // 1     2     2
+            game = (Game)SetUpGame(); // (10) + (5) + (5) 
+            MultipleRolls(1, 10); // Räknar 2 nästa kast, (10) + (5) + (5), Frame 1 = 20.
+            MultipleRolls(3, 5); // Frame 2 = (5) + (5), + 5 nästa. Total = 35
+                                // Frame 3 = (5) = Total 40
+            Assert.Equal(40, game.Score());
+        }
     }
 }
