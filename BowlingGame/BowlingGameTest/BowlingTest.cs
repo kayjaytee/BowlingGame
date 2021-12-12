@@ -85,7 +85,6 @@ namespace BowlingGame
             //Act - When
             RollSpare();
             SingleRoll(3);
-            MultipleRolls(17, 0);
 
             //Assert - Then
             Assert.Equal(16, Result());
@@ -133,14 +132,14 @@ namespace BowlingGame
             SingleRoll(3);
 
 
-            Assert.Equal(46, Result());
+            Assert.Equal(47, Result());
 
         }
 
         [Fact(DisplayName = "Jonathan Test")]
         [Trait("PersonalTests:", "Jonathan")]
         private void JonathanTest()
-        {                               // 1     2     2
+        {                  // 1     2     2
             SetUpGame(); // (10) + (5) + (5) 
             MultipleRolls(1, 10); // Räknar 2 nästa kast, (10) + (5) + (5), Frame 1 = 20.
             MultipleRolls(3, 5); // Frame 2 = (5) + (5), + 5 nästa. Total = 35
