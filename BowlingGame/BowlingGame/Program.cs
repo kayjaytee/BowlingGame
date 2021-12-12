@@ -7,7 +7,7 @@ namespace BowlingGame
     internal class Game
     {
 
-        private readonly int[] rolls = new int[21]; // Räknar från 0
+        private readonly int[] rolls = new int[21];
         private int currentRoll = 0;
 
         internal void Roll(int pins)

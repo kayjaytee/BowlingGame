@@ -5,7 +5,7 @@ namespace BowlingGame
     public class BowlingTest
     {
         private Game game;
-        internal object SetUpGame() //Gammal Lösning: game = (Game)SetUpGame();
+        protected object SetUpGame()
         {
             game = new Game();
             return game;
@@ -61,16 +61,10 @@ namespace BowlingGame
         [Trait("Category:", "Unit Testing")]
         private void HitOnePinEachFrame()
         {
-
-            //Arrange - Given
             SetUpGame();
 
-
-            //Act - When
             MultipleRolls(20, 1);
 
-
-            //Assert - Then
             Assert.Equal(20, Result());
 
         }
@@ -79,14 +73,11 @@ namespace BowlingGame
         [Trait("Category:", "Unit Testing")]
         private void TestSpare()
         {
-            //Arrange - Given
             SetUpGame();
 
-            //Act - When
             RollSpare();
             SingleRoll(3);
 
-            //Assert - Then
             Assert.Equal(16, Result());
         }
 
@@ -94,22 +85,22 @@ namespace BowlingGame
         [Trait("Category:", "Unit Testing")]
         private void TestOneStrike()
         {
-            //Arrange - Given
             SetUpGame();
 
             RollStrike(); //10 (3 + 4) = 17
             SingleRoll(3); // (3 + 4)
             SingleRoll(4); // = Total 24
-            Assert.Equal(24, Result()); //Old: Actual result 20
+
+            Assert.Equal(24, Result());
+
         }
 
         [Fact(DisplayName = "With perfect score, will the values applied be correct?")]
         [Trait("Category:", "Unit Testing")]
         private void TestPerfectGame()
         {
-        
             SetUpGame();
-   
+
             MultipleRolls(12, 10);
 
             Assert.Equal(300, Result());
@@ -132,7 +123,7 @@ namespace BowlingGame
             SingleRoll(3);
 
 
-            Assert.Equal(47, Result());
+            Assert.Equal(46, Result());
 
         }
 
@@ -140,7 +131,7 @@ namespace BowlingGame
         [Trait("PersonalTests:", "Jonathan")]
         private void JonathanTest()
         {                  // 1     2     2
-            SetUpGame(); // (10) + (5) + (5) 
+            SetUpGame();   // (10) + (5) + (5) 
             MultipleRolls(1, 10); // Räknar 2 nästa kast, (10) + (5) + (5), Frame 1 = 20.
             MultipleRolls(3, 5); // Frame 2 = (5) + (5), + 5 nästa. Total = 35
                                  // Frame 3 = (5) = Total 40
@@ -149,14 +140,15 @@ namespace BowlingGame
 
         [Fact(DisplayName = "Mr oliver Test")]
         [Trait("PersonalTests:", "Mr Oliver Test")]
-        void MrOliverTest()
-            {
-             game = (Game)SetUpGame();   //
+        private void MrOliverTest()
+        {
+            SetUpGame();
+
              MultipleRolls(1, 5);
              MultipleRolls(2, 10);
 
-             Assert.Equal(25, game.Score());
-            }
+             Assert.Equal(25, Result());
+        }
     }
 
 }
